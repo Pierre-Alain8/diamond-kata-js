@@ -21,15 +21,12 @@ describe("verify", function() {
     expect(typeof verifyNumber(n)).toBe("string")
   });
   
-  // it("should return one * ", () => {
-  //   const n = 1; 
-  //   expect(verifyNumber(n)).toEqual("*")
-  // });
 
   it("should return multiple * ", () => {
     const n = 3; 
     const diamond = verifyNumber(n);
-    expect(diamond).toEqual(` *\n***\n *`)
+    console.log(diamond);
+    expect(diamond).toMatch(` *\n***\n *`)
   });
 
 });
